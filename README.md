@@ -110,4 +110,4 @@ MIT — free to use, fork, improve, and share!
 
 ## 🙋‍♂️ Need Help?
 
-Open an issue or email me at [your email here].
+Open an issue or email me at shantandd@gmail.com .
