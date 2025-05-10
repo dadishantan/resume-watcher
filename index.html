@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redirecting to Resume...</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="config.js"></script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const viewer = params.get('viewer') || 'Unknown';
+      const ua = navigator.userAgent;
+
+      fetch(`${CONFIG.LOGGING_URL}?viewer=${encodeURIComponent(viewer)}&ua=${encodeURIComponent(ua)}&key=${CONFIG.SECRET_KEY}`);
+
+      setTimeout(() => {
+        window.location.href = CONFIG.RESUME_URL;
+      }, 800);
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Redirecting...</h1>
+      <p>Hi there, we’re taking you to the resume. Please hold on...</p>
+    </div>
+  </body>
+</html>
